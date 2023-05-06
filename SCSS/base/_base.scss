@@ -1,0 +1,60 @@
+@use '../base/variables' as v;
+//@use 'mixins'; 
+
+
+
+// paddingy a bordery započítány do velikosti boxů
+
+html {
+    box-sizing: border-box;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+
+
+
+// reset
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+// body
+
+body {
+   font-family: v.$font-body;
+   font-size: 20px;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
+}
+
+h1 {
+    font-family: v.$font-special;
+    font-size: 48px;
+    font-weight: 500;
+    color: v.$color-primary-400;
+}
+
+a {
+    color: v.$color-accent-400;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1040px;
+    padding: v.$spacer-half;
+
+    /*@include mixins.medium {
+        padding: base/variables.$spacer;
+    }*/
+}

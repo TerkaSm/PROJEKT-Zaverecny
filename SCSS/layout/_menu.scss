@@ -1,0 +1,15 @@
+@use '../base/variables' as v;
+@use '../base/base';
+
+.menu {
+    margin: v.$spacer auto;
+    display: flex;
+    justify-content: center;
+    gap: v.$spacer-half;
+}
+
+.menu__item {
+    padding: v.$spacer-half v.$spacer;
+    border: 1px solid v.$color-accent-400;
+    border-radius: 40px;
+}
