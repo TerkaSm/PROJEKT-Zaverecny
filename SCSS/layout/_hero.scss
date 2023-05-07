@@ -1,0 +1,59 @@
+@use '../base/variables' as v;
+@use '../base/base';
+
+
+.hero {
+    height: 450px;
+
+    &__box {
+        padding: 0 v.$spacer-half;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__text {
+        flex: 1;
+    }
+
+
+    &__title {
+        display: inline-block;
+    
+
+        &--dont {
+            font-family: v.$font-special-2;
+            font-size: 38px;
+            font-weight: 400;
+            color: v.$color-secondary-400;
+        }
+
+        &--adopt {
+            font-family: v.$font-special;
+            font-size: 68px;
+            font-weight: 500;
+            color: v.$color-primary-400;
+            border-bottom: 2px solid v.$color-secondary-400;
+        }
+    }
+
+    &__sentence {
+        font-size: 16px;
+        font-weight: 500;
+        color: v.$color-secondary-400;
+        margin-top: v.$spacer-half;
+    }
+
+    &__img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 350px;
+    }
+}
+
+.button--primary {
+    padding: v.$spacer-half v.$spacer;
+    display: block;
+    border: 1px solid v.$color-secondary-400;
+}

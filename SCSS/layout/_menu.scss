@@ -3,13 +3,33 @@
 
 .menu {
     margin: v.$spacer auto;
-    display: flex;
-    justify-content: center;
-    gap: v.$spacer-half;
+    text-align: center;
+
+    &__checkbox {
+        position: absolute;
+        left: -9999px;
+    }
+
+    &__checkbox:checked ~ .menu__item {
+        display: block;
+    }
+    
+    &__toggler {
+        cursor: pointer;
+        font-size: 40px;
+        padding-left: v.$spacer-half;
+    }
+
+    &__item {
+        display: block;
+        padding: v.$spacer-half v.$spacer;
+        font-size: 20px;
+        border-bottom: 1px solid v.$color-secondary-400;
+
+        &:hover {
+            color: v.$color-background-sections;
+            background-color: v.$color-secondary-400;
+        }
+    }
 }
 
-.menu__item {
-    padding: v.$spacer-half v.$spacer;
-    border: 1px solid v.$color-accent-400;
-    border-radius: 40px;
-}

@@ -15,7 +15,6 @@ html {
 
 
 
-
 // reset
 
 * {
@@ -29,22 +28,17 @@ html {
 
 body {
    font-family: v.$font-body;
-   font-size: 20px;
+   font-size: 16px;
+   background-color: v.$color-background-body;
 }
 
 h1, h2, h3, h4, h5 {
     font-weight: 700;
 }
 
-h1 {
-    font-family: v.$font-special;
-    font-size: 48px;
-    font-weight: 500;
-    color: v.$color-primary-400;
-}
 
 a {
-    color: v.$color-accent-400;
+    color: v.$color-secondary-400;
     font-weight: 700;
     text-decoration: none;
 }
@@ -52,7 +46,7 @@ a {
 .wrapper {
     margin: 0 auto;
     max-width: 1040px;
-    padding: v.$spacer-half;
+    padding: 0 v.$spacer-half;
 
     /*@include mixins.medium {
         padding: base/variables.$spacer;

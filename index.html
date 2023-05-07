@@ -7,24 +7,28 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Outfit:wght@500&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="CSS/style.css">
 
     <title>Kočičí Azyl</title>
 </head>
 <body>
-    <!--Header-->
 
-    <div class="wrapper">
+    <div class="border">
+
+        <!--Header-->
 
         <header class="header">
             <figure class="logo"><img class="logo__img" src="images/logo-kocici-azyl.png" alt="Kočičí-azyl"></figure>
+            <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
+            <label for="menu-checkbox" class="menu__toggler">☰</label>
             <nav class="menu">
                 <a href="#" class="menu__item">Adoptuj</a>
                 <a href="#" class="menu__item">Daruj</a>
                 <a href="#" class="menu__item">Pomáhej</a>
                 <a href="#" class="menu__item">O nás</a>
+                <a href="#" class="menu__item">Kontakt</a>
             </nav>
             <div class="contact-bar">
                 <a href="#"><img src="icons/icone-phone.svg" alt="icone-phone"></a>
@@ -33,17 +37,24 @@
             </div>
         </header>
 
+
+        <!--Hero-->
+
+        <section class="hero">
+            <div class="hero__box">
+                <div class="hero__text">
+                    <h1 class="hero__title"><span class="hero__title--dont">Nekupuj.</span><br>
+                    <span class="hero__title--adopt">Adoptuj!</span></h1>
+                    <p class="hero__sentence">Staň se hrdinou v jednom kočičím příběhu</p>
+                </div>
+                <a href="button--primary">Chci být hrdinou</a>
+            </div>
+            <img class="hero__img" src="images/hero-kocka.png" alt="kočka">
+        </section>
+
     </div>
 
-    <!--Hero
 
-    <section class="hero">
-        <h1><span class="dont">Nekupuj.</span><br>Adoptuj!</h1>
-    </section>
-    -->
 
-    <div class="wrapper">
-
-    </div>
 </body>
 </html>

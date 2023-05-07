@@ -12,19 +12,13 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  background-color: #E8E1D1;
 }
 
 h1, h2, h3, h4, h5 {
   font-weight: 700;
-}
-
-h1 {
-  font-family: "Outfit", sans-serif;
-  font-size: 48px;
-  font-weight: 500;
-  color: #C53607;
 }
 
 a {
@@ -36,36 +30,110 @@ a {
 .wrapper {
   margin: 0 auto;
   max-width: 1040px;
-  padding: 10px;
+  padding: 0 10px;
   /*@include mixins.medium {
       padding: base/variables.$spacer;
   }*/
 }
 
-.header {
+.border {
+  background-color: #EDE9E0;
+  border: 10px solid #C53607;
+  height: 100vh;
+  width: 100vw;
+  max-width: 1200px;
+  max-height: 742px;
+  margin: 0 auto;
   position: relative;
+}
+
+.header {
+  max-width: 1040px;
+  margin: 0 auto;
 }
 
 .contact-bar {
   position: absolute;
   top: 10px;
   right: 10px;
+  height: 50px;
 }
 
 .logo__img {
-  width: 80px;
-  display: block;
+  height: 55px;
+  display: none;
 }
 
 .menu {
   margin: 20px auto;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+  text-align: center;
+}
+.menu__checkbox {
+  position: absolute;
+  left: -9999px;
+}
+.menu__checkbox:checked ~ .menu__item {
+  display: block;
+}
+.menu__toggler {
+  cursor: pointer;
+  font-size: 40px;
+  padding-left: 10px;
+}
+.menu__item {
+  display: block;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-bottom: 1px solid #4A3A2B;
+}
+.menu__item:hover {
+  color: #EDE9E0;
+  background-color: #4A3A2B;
 }
 
-.menu__item {
+.hero {
+  height: 450px;
+}
+.hero__box {
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hero__text {
+  flex: 1;
+}
+.hero__title {
+  display: inline-block;
+}
+.hero__title--dont {
+  font-family: "Inter", sans-serif;
+  font-size: 38px;
+  font-weight: 400;
+  color: #4A3A2B;
+}
+.hero__title--adopt {
+  font-family: "Outfit", sans-serif;
+  font-size: 68px;
+  font-weight: 500;
+  color: #C53607;
+  border-bottom: 2px solid #4A3A2B;
+}
+.hero__sentence {
+  font-size: 16px;
+  font-weight: 500;
+  color: #4A3A2B;
+  margin-top: 10px;
+}
+.hero__img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 350px;
+}
+
+.button--primary {
   padding: 10px 20px;
+  display: block;
   border: 1px solid #4A3A2B;
-  border-radius: 40px;
 }/*# sourceMappingURL=style.css.map */
