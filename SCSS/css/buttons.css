@@ -1,1 +1,46 @@
-/*# sourceMappingURL=buttons.css.map */
+/*@mixin grid ($pocet) {
+    display: grid;
+    grid-template-columns: repeat($pocet, 1fr);
+}*/
+html {
+  box-sizing: border-box;
+}
+
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  background-color: #E8E1D1;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+}
+
+a {
+  color: #4A3A2B;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1040px;
+  padding: 0 10px;
+  /*@include mixins.medium {
+      padding: base/variables.$spacer;
+  }*/
+}
+
+.button {
+  color: #4A3A2B;
+  border: 1px solid #4A3A2B;
+}/*# sourceMappingURL=buttons.css.map */

@@ -1,0 +1,18 @@
+@use '../base/variables' as v;
+@use '../base/mixins';
+@use '../base/base';
+
+.button {
+    display: inline-block;
+    font-size: 20px;
+    color: v.$color-secondary-400;
+    border: 2px solid v.$color-secondary-400;
+    padding: v.$spacer-half v.$spacer;
+
+    &:hover,
+    &:active {
+        color: v.$color-background-sections;
+        background-color: v.$color-secondary-400;
+        border: 2px solid v.$color-secondary-400;
+    }
+}

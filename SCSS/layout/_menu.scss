@@ -1,35 +1,42 @@
 @use '../base/variables' as v;
+@use '../base/mixins';
 @use '../base/base';
 
 .menu {
-    margin: v.$spacer auto;
     text-align: center;
+    padding: v.$spacer-half 0;
+    background-color: v.$color-secondary-400;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    //@include grid;
 
-    &__checkbox {
-        position: absolute;
-        left: -9999px;
-    }
-
-    &__checkbox:checked ~ .menu__item {
-        display: block;
-    }
-    
-    &__toggler {
-        cursor: pointer;
-        font-size: 40px;
-        padding-left: v.$spacer-half;
-    }
 
     &__item {
-        display: block;
-        padding: v.$spacer-half v.$spacer;
-        font-size: 20px;
-        border-bottom: 1px solid v.$color-secondary-400;
+        padding: 0;
+        font-size: 14px;
+        color: v.$color-background-sections;
 
         &:hover {
-            color: v.$color-background-sections;
-            background-color: v.$color-secondary-400;
+            color: v.$color-primary-400;
         }
     }
+
+
+    &__icone img {
+        fill: v.$color-primary-400;
+    }
 }
+
+img.menu__icone {
+    fill: v.$color-primary-400;
+}
+
+
+/*.grid-five-columns {
+    @include grid(5);
+}*/
 
