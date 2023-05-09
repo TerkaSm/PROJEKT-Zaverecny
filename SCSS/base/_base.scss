@@ -1,4 +1,5 @@
 @use '../base/variables' as v;
+@use '../base/mixins' as mx;
 //@use 'mixins'; 
 
 
@@ -12,6 +13,10 @@ html {
 *, ::before, ::after {
     box-sizing: inherit;
 }
+
+html {
+    font-size: 100%;
+  }
 
 
 
@@ -36,6 +41,10 @@ h1, h2, h3, h4, h5 {
     font-weight: 700;
 }
 
+h2 {
+    font-size: clamp(1.75rem, 8vw, 3.5rem);
+}
+
 
 a {
     color: v.$color-secondary-400;
@@ -46,9 +55,11 @@ a {
 .wrapper {
     margin: 0 auto;
     max-width: 1040px;
-    padding: 0 v.$spacer-half;
+    padding: clamp(v.$spacer-half, 3vw, v.$spacer);
+    padding-top: 0;
+    //padding: 0 v.$spacer-half;
 
-    /*@include mixins.medium {
-        padding: base/variables.$spacer;
+   /* @include mx.media-min(900px) {
+        padding: v.$spacer;
     }*/
 }

@@ -1,5 +1,5 @@
 @use '../base/variables' as v;
-@use '../base/mixins';
+@use '../base/mixins' as mx;
 @use '../base/base';
 
 .menu {
@@ -9,34 +9,56 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    //@include grid;
+    //@include mx.grid(5);
 
+    @include mx.media-max(900px) {
+        @include mx.grid(5);
+    }
 
-    &__item {
-        padding: 0;
-        font-size: 14px;
-        color: v.$color-background-sections;
+    @include mx.media-min(900px) {
+        position: static;
+        margin: -80px auto 0 auto;
+        display: flex;
+        max-width: 850px;
+        background-color: v.$color-background-sections;
+    }
 
-        &:hover {
-            color: v.$color-primary-400;
+    &__icon {
+        padding-bottom: 2px;
+
+        @include mx.media-min(900px) {
+            display: none;
         }
     }
 
 
-    &__icone img {
-        fill: v.$color-primary-400;
+    &__item {
+        font-size: 14px;
+        color: v.$color-background-sections;
+
+        @include mx.media-min(900px) {
+            padding: v.$spacer-half v.$spacer;
+            color: v.$color-secondary-400;
+            background-color: v.$color-background-sections;
+            border: 2px solid v.$color-background-sections;
+            font-size: 24px;
+        }
+
+        &:hover {
+            transform: scale(1.2);
+
+            @include mx.media-min(900px) {
+                transform: none;
+                border: 2px solid v.$color-secondary-400;
+            }
+        }
     }
+
+
 }
 
-img.menu__icone {
-    fill: v.$color-primary-400;
-}
-
-
-/*.grid-five-columns {
-    @include grid(5);
+/*.none {
+    display: none;
 }*/
+
 

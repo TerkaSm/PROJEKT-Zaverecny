@@ -1,5 +1,5 @@
 
-//používá se přes @include nazev-mixinu
+//používá se přes @include mixins.nazev-mixinu;
 
 //gridy
 
@@ -9,21 +9,30 @@
     palce-content: center;
 }
 
-/*@mixin grid ($pocet) {
+@mixin grid ($pocet) {
     display: grid;
     grid-template-columns: repeat($pocet, 1fr);
-}*/
-
-@mixin grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
 }
+
 
 
 
 //media queries
 
-@mixin medium {
+
+@mixin media-min ($pocet) {
+    @media screen and (min-width:$pocet) {
+        @content;
+    }
+}
+
+@mixin media-max ($pocet) {
+    @media screen and (max-width:$pocet) {
+        @content;
+    }
+}
+
+/*@mixin medium {
     @media screen and (min-width:768px) {
         @content;
     }
@@ -33,4 +42,4 @@
     @media screen and (min-width:960px) {
         @content;
     }
-}
+}*/
