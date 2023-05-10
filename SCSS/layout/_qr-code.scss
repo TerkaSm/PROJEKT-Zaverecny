@@ -1,0 +1,82 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as mx;
+@use '../base/base';
+
+.qr-code {
+    background-color: v.$color-background-sections;
+    margin-top: clamp(v.$spacer-half, 5vw, v.$spacer-double);
+    padding: v.$spacer;
+
+    @include mx.media-min(700px) {
+        display: flex;
+        gap: v.$spacer;
+     }
+
+    &__content {
+        display: flex;
+        height: 355px;
+        padding: v.$spacer;
+        padding-top: 0;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+
+        @include mx.media-min(700px) {
+            text-align: left;
+            padding: v.$spacer;
+         }
+    }
+
+    &__title {
+        flex: 1;
+        font-weight: 400;
+    }
+
+    &__title--change {
+        color: v.$color-secondary-400;
+    }
+
+    &__account {
+        flex: 1;
+    }
+
+    &__account-text {
+        font-size: 14px;
+        font-weight: 700;
+        color: v.$color-primary-400;
+    }
+
+    &__account-number {
+        font-size: 20px;
+        color: v.$color-secondary-400;
+    }
+
+    &__butt-ic {
+        flex: 1;
+
+        @include mx.media-min(700px) {
+            display: flex;
+            gap: v.$spacer;
+         }
+    }
+
+    &__icon {
+        margin-top: v.$spacer;
+        flex: 1;
+        text-align: center;
+    }
+
+    &__link {
+        padding: v.$spacer;
+        align-self: center;
+    }
+
+    &__code {
+        max-width: 90vw;
+    }
+
+}
+
+.wrapp-butt {
+    align-self: center;
+}

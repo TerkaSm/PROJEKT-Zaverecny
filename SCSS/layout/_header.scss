@@ -5,7 +5,6 @@
 
 .border {
     background-color: v.$color-background-sections;
-    //border: 10px solid v.$color-primary-400;
     height: 100vh;
     width: 100vw;
     min-height: 700px;
@@ -26,6 +25,7 @@
 
 .contact-bar {
     position: absolute;
+    z-index: 2;
     top: 10px;
     right: 10px;
 
@@ -36,7 +36,6 @@
 
 
     &__icon img {
-        //height: 45px;
         padding-left: 3px;
         padding-bottom: 5px;
 
