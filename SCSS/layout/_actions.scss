@@ -3,10 +3,12 @@
 @use '../base/base';
 
 .actions {
-    margin-top: clamp(v.$spacer-half, 5vw, v.$spacer-large);
+    margin-top: clamp(v.$spacer-half, 5vw, v.$spacer-double);
+    padding: 0 v.$spacer-double;
 
     @include mx.media-min(700px) {
        display: flex;
        gap: v.$spacer;
+       padding: 0;
     }
 }

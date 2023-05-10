@@ -5,12 +5,17 @@
 
 .border {
     background-color: v.$color-background-sections;
-    border: 10px solid v.$color-primary-400;
+    //border: 10px solid v.$color-primary-400;
     height: 100vh;
     width: 100vw;
+    min-height: 700px;
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
+
+    @include mx.media-min(450px) {
+        border: 10px solid v.$color-primary-400;
+    }
 
 }
 
@@ -25,12 +30,19 @@
     right: 10px;
 
     @include mx.media-min(900px) {
-        top: 55vh;
-    }
+        top: 20px;
+        right: 20px;
+    } 
+
 
     &__icon img {
-        height: 45px;
+        //height: 45px;
         padding-left: 3px;
+        padding-bottom: 5px;
+
+        width: 12vw;
+        min-width: 45px;
+        max-width: 55px;
 
         &:hover {
             transform: scale(1.1);
@@ -38,19 +50,14 @@
 
         @include mx.media-min(900px) {
             display: block;
-            margin-top: v.$spacer-half;
-
-            &:hover {
-                transform: scale(1.1);
-            }
         } 
     }
 }
 
 
 .logo__img {
-    display: block;
-    margin-top: v.$spacer-half;
+    display: inline-block;
+    margin-top: clamp(v.$spacer-half, 1vw, v.$spacer);
 
     &:hover {
         transform: scale(1.1);
