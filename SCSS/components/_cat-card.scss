@@ -1,0 +1,10 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as mx;
+@use '../base/base';
+
+.cat-card {
+    background-color: v.$color-background-sections;
+    box-shadow: v.$shadow;
+    padding: clamp(v.$spacer, 3vw, v.$spacer-double);
+    margin-top: clamp(v.$spacer-half, 5vw, v.$spacer);
+}

@@ -4,11 +4,13 @@
 
 .qr-code {
     background-color: v.$color-background-sections;
-    margin-top: clamp(v.$spacer-half, 5vw, v.$spacer-double);
+    margin-top: clamp(2px, 5vw, v.$spacer-medium);
     padding: v.$spacer;
+    box-shadow: v.$shadow;
 
     @include mx.media-min(700px) {
         display: flex;
+        justify-content: space-between;
         gap: v.$spacer;
      }
 
@@ -41,13 +43,14 @@
     }
 
     &__account-text {
-        font-size: 14px;
+        font-size: clamp(0.9rem, 2vw, 1.2rem);
         font-weight: 700;
         color: v.$color-primary-400;
     }
 
     &__account-number {
-        font-size: 20px;
+        font-size: clamp(1.5rem, 4vw, 3.3rem);
+        font-weight: 500;
         color: v.$color-secondary-400;
     }
 
@@ -56,6 +59,7 @@
 
         @include mx.media-min(700px) {
             display: flex;
+            align-items: flex-end;
             gap: v.$spacer;
          }
     }
@@ -66,13 +70,19 @@
         text-align: center;
     }
 
+    &__wrapper {
+        display: grid;
+        place-content: center;
+    }
+
     &__link {
-        padding: v.$spacer;
-        align-self: center;
+        //padding: v.$spacer;
+        text-align: center;
     }
 
     &__code {
-        max-width: 90vw;
+        //max-width: 64vw;
+        max-width: 83%;
     }
 
 }

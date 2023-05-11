@@ -4,6 +4,7 @@
 
 .action {
     background-color: v.$color-background-sections;
+    box-shadow: v.$shadow;
     padding: clamp(v.$spacer, 3vw, v.$spacer-double);
     margin-top: clamp(v.$spacer-half, 5vw, v.$spacer);
 
@@ -34,9 +35,13 @@
         flex: 1;
     }
 
-    &__img {
+    &__icon {
         width: 8vw;
         min-width: 55px;
         max-width: 90px;
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 }
