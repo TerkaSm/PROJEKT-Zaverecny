@@ -9,7 +9,7 @@
     margin-top: clamp(v.$spacer-half, 5vw, v.$spacer);
 
     display: flex;
-    flex-direction: column;
+    //flex-direction: column;
     align-items: center;
     gap: v.$spacer;
 
@@ -26,8 +26,7 @@
         align-items: center;
         flex: 1 1 calc(100% / 3);
 
-        padding-top: v.$spacer-double;
-        padding-bottom: v.$spacer-double;
+        padding: v.$spacer-double 0 ;
     }
 
     &__link {

@@ -37,7 +37,7 @@ h1, h3, h4, h5 {
 }
 
 h2 {
-  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-size: clamp(1.4rem, 3vw, 2rem);
   color: #C53607;
 }
 
@@ -336,8 +336,13 @@ a {
   }
 }
 
+.wrapper__cats {
+  margin: clamp(10px, 5vw, 40px) 0;
+  text-align: center;
+}
+
 .cats {
-  margin-top: clamp(10px, 5vw, 40px);
+  margin-top: 0;
   padding: 0 40px;
 }
 @media screen and (min-width: 700px) {
@@ -347,19 +352,38 @@ a {
     padding: 0;
   }
 }
+.cats__title {
+  font-weight: 500;
+}
+
+.wrapp-butt--space-up {
+  margin-top: 40px;
+}
 
 .button {
   display: inline-block;
-  font-size: 20px;
+  font-size: 1.3rem;
   text-align: center;
   color: #4A3A2B;
   border: 2px solid #4A3A2B;
   padding: 10px 20px;
+  min-width: 133px;
 }
 .button:hover, .button:active {
   color: #EDE9E0;
   background-color: #4A3A2B;
   border: 2px solid #4A3A2B;
+}
+.button--primary {
+  color: #C53607;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 2px solid #C53607;
+}
+.button--primary:hover, .button--primary:active {
+  color: #EDE9E0;
+  background-color: #C53607;
+  border: 2px solid #C53607;
 }
 
 .action {
@@ -368,7 +392,6 @@ a {
   padding: clamp(20px, 3vw, 40px);
   margin-top: clamp(10px, 5vw, 20px);
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 20px;
 }
@@ -385,8 +408,7 @@ a {
     flex-direction: column;
     align-items: center;
     flex: 1 1 33.3333333333%;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 40px 0;
   }
 }
 .action__link {
@@ -405,6 +427,28 @@ a {
 .cat-card {
   background-color: #EDE9E0;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  padding: clamp(20px, 3vw, 40px);
   margin-top: clamp(10px, 5vw, 20px);
+}
+.cat-card__wrapper {
+  width: 100%;
+}
+.cat-card__img {
+  width: 100%;
+}
+.cat-card__content {
+  padding: 20px;
+  color: #4A3A2B;
+  text-align: center;
+}
+.cat-card__title {
+  font-size: 1.8rem;
+  margin-bottom: 1.1rem;
+}
+.cat-card__text {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+.cat-card__text--second {
+  margin-bottom: 1.2rem;
 }/*# sourceMappingURL=style.css.map */

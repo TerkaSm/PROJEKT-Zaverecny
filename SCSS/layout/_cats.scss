@@ -3,8 +3,13 @@
 @use '../base/base';
 
 
+.wrapper__cats {
+    margin: clamp(v.$spacer-half, 5vw, v.$spacer-double) 0;
+    text-align: center;
+}
+
 .cats {
-    margin-top: clamp(v.$spacer-half, 5vw, v.$spacer-double);
+    margin-top: 0;
     padding: 0 v.$spacer-double;
 
     @include mx.media-min(700px) {
@@ -12,4 +17,12 @@
        gap: v.$spacer;
        padding: 0;
     }
+
+    &__title {
+        font-weight: 500;
+    }
+}
+
+.wrapp-butt--space-up {
+    margin-top: v.$spacer-double;
 }
