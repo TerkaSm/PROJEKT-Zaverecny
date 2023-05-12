@@ -1,0 +1,37 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as mx;
+@use '../base/base';
+
+
+.footer-background {
+    color: v.$color-background-sections;
+    background-color: v.$color-secondary-400;
+
+}
+
+.footer {
+    padding: v.$spacer-double;
+    a {
+        color: v.$color-background-sections;
+        display: block;
+        padding: v.$spacer-half v.$spacer;
+    }
+
+    @include mx.media-min(660px) {
+        @include mx.grid(2);
+        align-items: center;
+    }
+
+    @include mx.media-min(1000px) {
+        @include mx.grid(4);
+    }
+
+    &__logo-wrapp {
+        padding: v.$spacer
+    }
+}
+
+.contacts {
+    @include mx.grid(2);
+    align-items: center;
+}

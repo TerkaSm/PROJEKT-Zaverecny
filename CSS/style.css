@@ -164,7 +164,7 @@ a {
 @media screen and (min-width: 900px) {
   .menu-large {
     display: flex;
-    margin: -60px auto 0 auto;
+    margin: -75px auto 0 auto;
     max-width: 650px;
     color: #4A3A2B;
     background-color: #EDE9E0;
@@ -317,7 +317,8 @@ a {
   text-align: center;
 }
 .qr-code__code {
-  max-width: 83%;
+  max-height: 355px;
+  max-width: 100%;
 }
 
 .wrapp-butt {
@@ -360,6 +361,42 @@ a {
   margin-top: 40px;
 }
 
+.footer-background {
+  color: #EDE9E0;
+  background-color: #4A3A2B;
+}
+
+.footer {
+  padding: 40px;
+}
+.footer a {
+  color: #EDE9E0;
+  display: block;
+  padding: 10px 20px;
+}
+@media screen and (min-width: 660px) {
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.footer__logo-wrapp {
+  padding: 20px;
+}
+
+.contacts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
 .button {
   display: inline-block;
   font-size: 1.3rem;
@@ -377,7 +414,6 @@ a {
 .button--primary {
   color: #C53607;
   font-size: 1rem;
-  font-weight: 700;
   border: 2px solid #C53607;
 }
 .button--primary:hover, .button--primary:active {
@@ -437,6 +473,7 @@ a {
 }
 .cat-card__content {
   padding: 20px;
+  padding-bottom: 30px;
   color: #4A3A2B;
   text-align: center;
 }
@@ -447,7 +484,7 @@ a {
 .cat-card__text {
   font-size: 1rem;
   font-weight: bold;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.2rem;
 }
 .cat-card__text--second {
   margin-bottom: 1.2rem;
