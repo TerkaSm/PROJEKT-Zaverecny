@@ -367,34 +367,114 @@ a {
 }
 
 .footer {
-  padding: 40px;
+  padding: 40px 0;
 }
-.footer a {
-  color: #EDE9E0;
-  display: block;
-  padding: 10px 20px;
+@media screen and (max-width: 660px) {
+  .footer {
+    text-align: center;
+  }
 }
 @media screen and (min-width: 660px) {
   .footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
+    padding-left: 40px;
   }
 }
 @media screen and (min-width: 1000px) {
   .footer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    padding-right: 40px;
   }
 }
 .footer__logo-wrapp {
-  padding: 20px;
+  padding: clamp(20px, 5vw, 40px);
+  padding-top: 0;
+}
+@media screen and (min-width: 660px) {
+  .footer__logo-wrapp {
+    padding-top: 40px;
+    padding-left: 20px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .footer__logo-wrapp {
+    padding-right: 40px;
+    padding-left: 0;
+  }
+}
+
+.menu-footer {
+  padding-top: clamp(5px, 2vw, 20px);
+  padding-bottom: clamp(5px, 2vw, 20px);
+}
+.menu-footer__item {
+  color: #EDE9E0;
+  display: block;
+  padding: 10px 20px;
+}
+.menu-footer__item:hover {
+  transform: scale(1.1);
+}
+
+.list-links {
+  padding-top: clamp(5px, 2vw, 20px);
+  padding-bottom: clamp(5px, 2vw, 20px);
+}
+.list-links__link {
+  color: #EDE9E0;
+  display: block;
+  padding: 10px 20px;
+}
+.list-links__link:hover {
+  transform: scale(1.1);
 }
 
 .contacts {
+  padding-top: clamp(10px, 3vw, 20px);
+  padding-bottom: clamp(5px, 2vw, 20px);
+  padding-left: 20px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
+  grid-template-columns: 36px 210px;
+  gap: 20px;
+  text-align: left;
+  max-width: 304px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 660px) {
+  .contacts {
+    margin: 0;
+    padding-right: 40px;
+  }
+}
+.contacts__link {
+  color: #EDE9E0;
+  display: block;
+}
+.contacts__link:hover {
+  transform: scale(1.1);
+}
+.contacts__link--icon {
+  width: 36px;
+}
+.contacts__link--icon:hover {
+  transform: scale(1.1);
+}
+.contacts__link--icon img {
+  width: 36px;
+  display: block;
+}
+
+.copy {
+  background-color: #E8E1D1;
+}
+.copy__text {
+  color: #4A3A2B;
+  text-align: center;
+  font-weight: 700;
+  padding: 20px;
 }
 
 .button {

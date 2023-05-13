@@ -10,28 +10,104 @@
 }
 
 .footer {
-    padding: v.$spacer-double;
-    a {
-        color: v.$color-background-sections;
-        display: block;
-        padding: v.$spacer-half v.$spacer;
+    padding: v.$spacer-double 0;
+
+    @include mx.media-max(660px) {
+        text-align: center;
     }
 
     @include mx.media-min(660px) {
         @include mx.grid(2);
         align-items: center;
+        padding-left: v.$spacer-double;
     }
 
     @include mx.media-min(1000px) {
         @include mx.grid(4);
+        padding-right: v.$spacer-double;
     }
 
     &__logo-wrapp {
-        padding: v.$spacer
+        padding: clamp(v.$spacer, 5vw, v.$spacer-double);
+        padding-top: 0;
+
+        @include mx.media-min(660px) {
+            padding-top: v.$spacer-double;
+            padding-left: v.$spacer;
+        }
+
+        @include mx.media-min(1000px) {
+            padding-right: v.$spacer-double;
+            padding-left: 0;
+        }
+    }
+}
+
+.menu-footer {
+    padding-top: clamp(5px, 2vw, v.$spacer);
+    padding-bottom: clamp(5px, 2vw, v.$spacer);
+
+    &__item {
+        color: v.$color-background-sections;
+        display: block;
+        padding: v.$spacer-half v.$spacer;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.list-links {
+    padding-top: clamp(5px, 2vw, v.$spacer);
+    padding-bottom: clamp(5px, 2vw, v.$spacer);
+
+    &__link {
+        color: v.$color-background-sections;
+        display: block;
+        padding: v.$spacer-half v.$spacer;
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 }
 
 .contacts {
-    @include mx.grid(2);
-    align-items: center;
+    padding-top: clamp(10px, 3vw, v.$spacer);
+    padding-bottom: clamp(5px, 2vw, v.$spacer);
+    padding-left: v.$spacer;
+    display: grid;
+    grid-template-columns: 36px 210px;
+    gap: v.$spacer;
+    text-align: left;
+    max-width: 304px;
+    margin: 0 auto;
+
+    @include mx.media-min(660px) {
+        margin: 0;
+        padding-right: v.$spacer-double;
+    }
+
+    &__link {
+        color: v.$color-background-sections;
+        display: block;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &--icon {
+            width: 36px;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        &--icon img {
+            width: 36px;
+            display: block;
+        }
+    }
 }
