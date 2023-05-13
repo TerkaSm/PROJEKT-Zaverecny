@@ -9,10 +9,12 @@
 @use 'layout/qr-code';
 @use 'layout/actions';
 @use 'layout/cats';
+@use 'layout/virtual-adoption';
 @use 'layout/footer';
 @use 'layout/copy';
 
 @use 'components/buttons';
+@use 'components/wrappers';
 @use 'components/action';
 @use 'components/cat-card';
 

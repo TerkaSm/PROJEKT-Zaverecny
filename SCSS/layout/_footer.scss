@@ -29,10 +29,9 @@
 
     &__logo-wrapp {
         padding: clamp(v.$spacer, 5vw, v.$spacer-double);
-        padding-top: 0;
 
         @include mx.media-min(660px) {
-            padding-top: v.$spacer-double;
+            padding-top: v.$spacer-medium;
             padding-left: v.$spacer;
         }
 
@@ -79,7 +78,8 @@
     padding-left: v.$spacer;
     display: grid;
     grid-template-columns: 36px 210px;
-    gap: v.$spacer;
+    gap: v.$spacer-half v.$spacer;
+    align-items: center;
     text-align: left;
     max-width: 304px;
     margin: 0 auto;
