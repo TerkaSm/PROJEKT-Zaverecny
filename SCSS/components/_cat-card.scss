@@ -5,7 +5,6 @@
 .cat-card {
     background-color: v.$color-background-sections;
     box-shadow: v.$shadow;
-    //padding: clamp(v.$spacer, 3vw, v.$spacer-double);
     margin-top: clamp(v.$spacer-half, 5vw, v.$spacer);
 
     &__wrapper {
@@ -24,7 +23,6 @@
     }
 
     &__title {
-        //color: v.$color-primary-400;
         font-size: 1.8rem;
         margin-bottom: 1.1rem;
     }

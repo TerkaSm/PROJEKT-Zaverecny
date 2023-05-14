@@ -43,8 +43,8 @@
 }
 
 .menu-footer {
-    padding-top: clamp(5px, 2vw, v.$spacer);
-    padding-bottom: clamp(5px, 2vw, v.$spacer);
+    padding-top: clamp(v.$spacer-half, 2vw, v.$spacer);
+    padding-bottom: clamp(v.$spacer-half, 2vw, v.$spacer);
 
     &__item {
         color: v.$color-background-sections;
@@ -58,8 +58,8 @@
 }
 
 .list-links {
-    padding-top: clamp(5px, 2vw, v.$spacer);
-    padding-bottom: clamp(5px, 2vw, v.$spacer);
+    padding-top: clamp(v.$spacer-half, 2vw, v.$spacer);
+    padding-bottom: clamp(v.$spacer-half, 2vw, v.$spacer);
 
     &__link {
         color: v.$color-background-sections;
@@ -73,7 +73,7 @@
 }
 
 .contacts {
-    padding-top: clamp(10px, 3vw, v.$spacer);
+    padding-top: clamp(v.$spacer-half, 3vw, v.$spacer);
     padding-bottom: clamp(5px, 2vw, v.$spacer);
     padding-left: v.$spacer;
     display: grid;
