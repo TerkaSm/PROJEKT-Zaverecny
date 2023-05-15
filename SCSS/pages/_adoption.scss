@@ -3,7 +3,7 @@
 @use '../base/base';
 
 
-// HEADER
+// Header
 
 .pages-background {
     height: 80px;
@@ -79,12 +79,6 @@
         }
     }
 
-    /*&__img-wrap {
-        min-height: 30vw;
-        background-color: v.$color-secondary-400;
-        background-image: url(images/adopce-header.jpg);
-    }*/
-
     &__img-wrap {
         width: 100vw;
     }
@@ -98,7 +92,7 @@
 
 
 
-//  MAIN
+//  Main
 
 .pages-main__grid {
     @include mx.media-min(600px) {
