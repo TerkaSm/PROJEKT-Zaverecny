@@ -660,6 +660,9 @@ a {
   line-height: 1.5;
   margin: clamp(20px, 3vw, 40px);
 }
+.text__paragraph--comparison {
+  font-size: 20px;
+}
 .text__link {
   text-decoration: underline;
 }
@@ -668,6 +671,24 @@ a {
 }
 .text__color-primary {
   color: #C53607;
+}
+.text__list {
+  color: #4A3A2B;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: clamp(20px, 3vw, 40px);
+}
+.text__wrapp-img {
+  margin: 20px auto;
+  text-align: center;
+}
+@media screen and (min-width: 660px) {
+  .text__grid {
+    display: grid;
+    gap: 20px;
+    align-items: center;
+    grid-template-columns: 1fr 3fr;
+  }
 }
 
 .pages-background {

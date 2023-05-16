@@ -31,6 +31,10 @@
         font-weight: bold;
         line-height: 1.5;
         margin: clamp(v.$spacer, 3vw, v.$spacer-double);
+
+        &--comparison {
+            font-size: 20px;
+        }
     }
 
     &__link {
@@ -43,5 +47,26 @@
 
     &__color-primary {
         color: v.$color-primary-400;
+    }
+
+    &__list {
+        color: v.$color-secondary-400;
+        font-weight: 700;
+        line-height: 1.3;
+        margin: clamp(v.$spacer, 3vw, v.$spacer-double);
+    }
+
+    &__wrapp-img {
+        margin: v.$spacer auto;
+        text-align: center;
+    }
+
+    &__grid {
+        @include mx.media-min(660px) {
+            display: grid;
+            gap: v.$spacer;
+            align-items: center;
+            grid-template-columns: 1fr 3fr;
+        }
     }
 }
