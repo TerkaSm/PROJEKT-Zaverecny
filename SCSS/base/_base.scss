@@ -46,6 +46,12 @@ h2 {
     font-weight: 500;
 }
 
+h3 {
+    font-size: clamp(1.5rem, 3vw, 1.7rem);
+    color: v.$color-primary-400;
+    font-weight: 500;
+}
+
 
 a {
     color: v.$color-secondary-400;

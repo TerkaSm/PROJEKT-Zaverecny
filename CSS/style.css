@@ -31,6 +31,12 @@ h2 {
   font-weight: 500;
 }
 
+h3 {
+  font-size: clamp(1.5rem, 3vw, 1.7rem);
+  color: #C53607;
+  font-weight: 500;
+}
+
 a {
   color: #4A3A2B;
   font-weight: 700;
@@ -641,6 +647,12 @@ a {
 }
 .text p:last-child {
   margin-bottom: 0;
+}
+.text h3:first-child {
+  margin-top: 0;
+}
+.text__title {
+  margin: clamp(20px, 3vw, 40px);
 }
 .text__paragraph {
   color: #4A3A2B;

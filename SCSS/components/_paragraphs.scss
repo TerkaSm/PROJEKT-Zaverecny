@@ -18,6 +18,14 @@
         margin-bottom: 0;
     }
 
+    h3:first-child {
+        margin-top: 0;
+    }
+
+    &__title {
+        margin: clamp(20px, 3vw, 40px);
+    }
+
     &__paragraph {
         color: v.$color-secondary-400;
         font-weight: bold;
