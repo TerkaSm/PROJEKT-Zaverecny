@@ -15,7 +15,7 @@
         height: 100%;
         max-width: 90%;
         flex: 1;
-        margin: clamp(v.$spacer, 3vw, v.$spacer-double);
+        margin: clamp(v.$spacer, 3vw, v.$spacer);
     }
 
     &__img {
@@ -34,7 +34,7 @@
 
     &__title {
         text-align: center;
-        padding-top: clamp(v.$spacer, 3vw, v.$spacer-double);
+        padding-top: clamp(v.$spacer, 3vw, v.$spacer);
     }
 
     &__checkbox-grid {
@@ -49,9 +49,14 @@
     }
 }
 
+
+// magrin pro 2. button
+
 .space-up {
     margin-top: v.$spacer;
 }
+
+// možno přidat nové položky s checkboxy
 
 .hidden {
     display: none;
